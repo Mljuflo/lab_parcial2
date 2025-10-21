@@ -1,0 +1,219 @@
+/* charlas-style.css */
+
+/* ================================================= */
+/* ESTILOS DE BASE Y GLOBAL (COPIADOS) */
+/* ================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --dark-bg: #0D0D0D; 
+    --dark-bg-secondary: #1A1A1A; 
+    --primary-text: #FFFFFF;
+    --secondary-text: #AAAAAA;
+    --accent-color: #00FFFF; /* Color Cian/Teal brillante */
+    --font-family: 'Poppins', sans-serif;
+    --table-bg-odd: #151515; /* Fondo más oscuro para filas alternas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-bg);
+    color: var(--primary-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.pre-heading {
+    color: var(--accent-color);
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.content-padding {
+    padding: 50px; /* Padding para el main content */
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.logo .subtitle {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--secondary-text);
+    margin-top: 2px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--accent-color);
+}
+
+.main-nav ul li .cta-link {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.main-nav ul li .cta-link:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+.search-icon {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* --- TÍTULO DE SECCIÓN --- */
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.section-heading h2 {
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+
+/* --- PIE DE PÁGINA --- */
+.main-footer {
+    text-align: center;
+    padding: 20px 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--secondary-text);
+    font-size: 0.8em;
+}
+
+/* ================================================= */
+/* ESTILOS ESPECÍFICOS DE CHARLAS (TABLA) */
+/* ================================================= */
+
+.table-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--dark-bg-secondary);
+    border-radius: 8px;
+    overflow: hidden; /* Para contener la sombra y el borde */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    text-align: left;
+}
+
+.schedule-table th {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.schedule-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 400;
+}
+
+/* Filas alternas para mejor legibilidad */
+.schedule-table tbody tr:nth-child(odd) {
+    background-color: var(--table-bg-odd);
+}
+
+/* Efecto hover en las filas */
+.schedule-table tbody tr:hover {
+    background-color: #242424; /* Un poco más claro al pasar el mouse */
+    cursor: pointer;
+}
+
+/* Columna de la hora destacada */
+.schedule-table .time-slot {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Estilo del botón "Asistir" */
+.btn-register-small {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.btn-register-small:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+.small-info {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--secondary-text);
+    font-size: 0.9em;
+}

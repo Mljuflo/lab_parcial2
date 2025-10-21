@@ -1,0 +1,214 @@
+/* carreras-style.css */
+
+/* ================================================= */
+/* ESTILOS DE BASE Y GLOBAL (COPIADOS DEL index-style.css) */
+/* ================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --dark-bg: #0D0D0D; 
+    --dark-bg-secondary: #1A1A1A; 
+    --primary-text: #FFFFFF;
+    --secondary-text: #AAAAAA;
+    --accent-color: #00FFFF; /* Color Cian/Teal brillante */
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-bg);
+    color: var(--primary-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.pre-heading {
+    color: var(--accent-color);
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.content-padding {
+    padding: 50px; /* Padding para el main content */
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.logo .subtitle {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--secondary-text);
+    margin-top: 2px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--accent-color);
+}
+
+.main-nav ul li .cta-link {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.main-nav ul li .cta-link:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+.search-icon {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* --- TÍTULO DE SECCIÓN --- */
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+.section-heading h2 {
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+
+/* --- PIE DE PÁGINA --- */
+.main-footer {
+    text-align: center;
+    padding: 20px 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--secondary-text);
+    font-size: 0.8em;
+}
+
+/* ================================================= */
+/* ESTILOS ESPECÍFICOS DE CARRERAS */
+/* ================================================= */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.program-card {
+    background-color: var(--dark-bg-secondary);
+    padding: 40px 30px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de hover similar al de la imagen */
+.program-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    transform: translateY(-8px);
+    background-color: #242424;
+}
+
+.card-icon {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.program-card h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.program-card p {
+    color: var(--secondary-text);
+    font-size: 1em;
+    margin-bottom: 25px;
+    min-height: 60px; /* Para que las tarjetas tengan una altura similar */
+}
+
+/* Estilo del botón de registro dentro de la tarjeta */
+.btn-card-register {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-card-register:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+.small-info {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--secondary-text);
+}

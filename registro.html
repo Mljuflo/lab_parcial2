@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Feria Académica 2025</title>
+    <link rel="stylesheet" href="css/registro-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <header class="main-header">
+        <div class="logo">
+            <span class="accent-color">UT</span>ECH
+            <p class="subtitle">Feria Académica 2025</p>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="carreras.html">PROGRAMAS Y CARRERAS</a></li>
+                <li><a href="charlas.html">HORARIOS DE CHARLAS</a></li>
+                <li><a href="registro.html" class="active cta-link">INICIAR SESIÓN</a></li> 
+                <li><a href="#" class="search-icon">🔍</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-padding center-content">
+        <section id="login" class="form-card login-card">
+            
+            <div class="section-heading">
+                <p class="pre-heading">ACCEDE A TU CUENTA</p>
+                <h2>INICIO DE <span class="accent-color">SESIÓN</span></h2>
+            </div>
+
+            <form id="login-form" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="tu.correo@ejemplo.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                </div>
+                
+                <button type="submit" class="btn-submit">INGRESAR</button>
+                
+                <div class="login-links">
+                    <p>¿Aún no tienes cuenta? <a href="#" class="accent-color">Regístrate aquí</a></p>
+                    <p><a href="#" class="accent-color small-link">¿Olvidaste tu contraseña?</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Universidad Tecnológica. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

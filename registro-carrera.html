@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Carrera - Feria Académica 2025</title>
+    <link rel="stylesheet" href="css/registro-carrera-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <header class="main-header">
+        <div class="logo">
+            <span class="accent-color">UT</span>ECH
+            <p class="subtitle">Feria Académica 2025</p>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="carreras.html">PROGRAMAS Y CARRERAS</a></li>
+                <li><a href="charlas.html">HORARIOS DE CHARLAS</a></li>
+                <li><a href="registro.html" class="cta-link">INICIAR SESIÓN</a></li>
+                <li><a href="#" class="search-icon">🔍</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-padding center-content">
+        <section id="registro-especifico" class="form-card">
+            <div class="section-heading">
+                <p class="pre-heading">TU FUTURO EMPIEZA AHORA</p>
+                <h2 id="titulo-registro">Registro de Interés</h2>
+            </div>
+            
+            <form id="form-registro-carrera" action="#" method="POST">
+                
+                <p class="form-description">Estás a punto de registrar tu interés en una carrera. Por favor, completa tus datos para que un asesor pueda contactarte.</p>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono (Opcional):</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+XX XXXX XXXX">
+                </div>
+
+                <input type="hidden" id="carrera-seleccionada" name="carrera_interes" value="">
+
+                <button type="submit" class="btn-submit">Confirmar Registro</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Universidad Tecnológica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. Obtener los parámetros de la URL
+            const params = new URLSearchParams(window.location.search);
+            
+            // 2. Obtener el valor de 'carrera'
+            const carreraQuery = params.get('carrera');
+
+            if (carreraQuery) {
+                // 3. Definir los nombres completos de las carreras
+                const nombresCarreras = {
+                    'Ingenieria': 'Ingeniería de Software',
+                    'Diseno': 'Diseño Gráfico Digital',
+                    'Administracion': 'Administración de Empresas',
+                    'Salud': 'Ciencias de la Salud'
+                };
+
+                // 4. Buscar el nombre completo
+                const nombreCompleto = nombresCarreras[carreraQuery] || 'Carrera no especificada';
+
+                // 5. Actualizar el título de la página
+                const titulo = document.getElementById('titulo-registro');
+                if (titulo) {
+                    // Usamos un span para aplicar el color cian al nombre de la carrera
+                    titulo.innerHTML = `Registro para: <span class="accent-color">${nombreCompleto}</span>`;
+                }
+
+                // 6. Asignar el valor al campo oculto del formulario
+                const campoOculto = document.getElementById('carrera-seleccionada');
+                if (campoOculto) {
+                    campoOculto.value = nombreCompleto;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

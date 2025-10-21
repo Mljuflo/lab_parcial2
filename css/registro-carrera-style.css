@@ -1,0 +1,226 @@
+/* registro-carrera-style.css */
+
+/* ================================================= */
+/* ESTILOS DE BASE Y GLOBAL (COPIADOS) */
+/* ================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --dark-bg: #0D0D0D; 
+    --dark-bg-secondary: #1A1A1A; 
+    --primary-text: #FFFFFF;
+    --secondary-text: #AAAAAA;
+    --accent-color: #00FFFF; /* Color Cian/Teal brillante */
+    --font-family: 'Poppins', sans-serif;
+    --input-bg: #222222; /* Fondo para campos de formulario */
+    --input-border: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-bg);
+    color: var(--primary-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.pre-heading {
+    color: var(--accent-color);
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.content-padding {
+    padding: 50px 20px;
+}
+
+/* Para centrar el formulario en la página */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineado arriba para evitar que se pegue al centro */
+    min-height: 80vh; 
+}
+
+
+/* --- HEADER Y NAVEGACIÓN (Consistente) --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.logo .subtitle {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--secondary-text);
+    margin-top: 2px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.main-nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.main-nav ul li .cta-link {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.main-nav ul li .cta-link:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+.search-icon {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* --- TÍTULO DE SECCIÓN --- */
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* --- PIE DE PÁGINA (Consistente) --- */
+.main-footer {
+    text-align: center;
+    padding: 20px 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--secondary-text);
+    font-size: 0.8em;
+}
+
+/* ================================================= */
+/* ESTILOS ESPECÍFICOS DEL FORMULARIO */
+/* ================================================= */
+
+.form-card {
+    background-color: var(--dark-bg-secondary);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.1); /* Sombra con brillo cian */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-description {
+    color: var(--secondary-text);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-text);
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    color: var(--primary-text);
+    font-family: var(--font-family);
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Resaltar el campo activo con el color acento */
+.form-group input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+    outline: none;
+    background-color: #101010; /* Un poco más oscuro al enfocar */
+}
+
+/* Estilo del botón de envío */
+.btn-submit {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, opacity 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #00E5E5; /* Cian un poco más brillante */
+    opacity: 0.9;
+}
